@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../Css/nav.css">
-	<link rel="stylesheet" type="text/css" href="../Css/Error.css">
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/npm.js"></script>
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="Css/nav.css">
+	<link rel="stylesheet" type="text/css" href="Css/Error.css">
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/npm.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -27,7 +27,7 @@
 						                <div class="collapse navbar-collapse" id="myNavbar">
 						  <!-- Collapsing code also (before the closing nav input closing div)-->
 						                  <ul class="nav navbar-nav" >
-						                    <li><a href="Home.php">Home</a></li>
+						                    <li><a href="index.php">Home</a></li>
 						                    <li><a href="Collection.php">Collection</a></li>
 											<li><a href="AboutUs.php">About Us</a></li>
 						                    <li><a href="Contact.php">Contact Us</a></li>
@@ -64,7 +64,7 @@
 					    	</div>
 				  	</nav>
 	<div class = "text-center container centered">
-		<img class = "Error-Image" src = "../Images/Error404.png">
+		<img class = "Error-Image" src = "Images/Error404.png">
 		<h1 class = "text-center">ERROR 404</h1>
 		<h3 class = "text-center">PAGE NOT FOUND</h3>
 		<p class = "text-center">The page you're looking for doesn't exist.<br>

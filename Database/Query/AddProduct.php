@@ -36,6 +36,7 @@ if(isset($_POST['AddProduct'])){
 
             $targetPath = "../Images/" . $imageFile;
             $sourcePath = $_FILES["fileUpload"]["tmp_name"];
+            $urlPath = "Images/" . $imageFile;
             if(file_exists($targetPath)){
                 $errorsAddProduct[] = "File already there";
             }
@@ -49,10 +50,10 @@ if(isset($_POST['AddProduct'])){
                     move_uploaded_file($sourcePath, $targetPath);
                     $sql = "INSERT INTO product(Image, 3dLink, Name, Type, Price, Description, Size, Wood) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                     $query = $conn->prepare($sql);
-                    $stmt = $query->execute(array($targetPath, $Link, $ProductName, $ProductType, $ProductPrice, $ProductDescription, $ProductSize, $ProductWood));
+                    $stmt = $query->execute(array($urlPath, $Link, $ProductName, $ProductType, $ProductPrice, $ProductDescription, $ProductSize, $ProductWood));
 
                 if($stmt){
-                        header("Location: ../Admin/Admin-AddProduct.php");
+                        header("Location: Admin-AddProduct.php");
                     }else{
                         echo 'Data Not Inserted';
                     }

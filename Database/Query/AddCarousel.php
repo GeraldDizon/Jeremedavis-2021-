@@ -26,7 +26,7 @@ if(isset($_POST['AddCarousel'])){
     $result = $query->execute(array(":carousel"=>$Carousel, ":id"=>$id));
 
     if($result){
-        header("Location: ../Admin/Admin-AddCarousel.php");
+        header("Location: Admin-AddCarousel.php");
     } else {
         echo 'error';
     }

@@ -6,8 +6,8 @@ session_start();
   $_SESSION['views']++;
 }
  echo $_SESSION['views'];*/
-include('../Database/Query/Inquiry.php');
-require('../Connection/Verification.php');
+include('Database/Query/Inquiry.php');
+require('Connection/Verification.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,14 +15,14 @@ require('../Connection/Verification.php');
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../Css/bootstrap-theme.min.css">
-<link rel="stylesheet" type="text/css" href="../Css/nav.css">
-<link rel="stylesheet" type="text/css" href="../Css/Contact.css">
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-min.js"></script>
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/npm.js"></script>
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="Css/nav.css">
+<link rel="stylesheet" type="text/css" href="Css/Contact.css">
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap-min.js"></script>
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/npm.js"></script>
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -43,7 +43,7 @@ require('../Connection/Verification.php');
 						                <div class="collapse navbar-collapse" id="myNavbar">
 						  <!-- Collapsing code also (before the closing nav input closing div)-->
 						                  <ul class="nav navbar-nav" >
-						                    <li><a href="Home.php">Home</a></li>
+						                    <li><a href="index.php">Home</a></li>
 						                    <li><a href="Collection.php">Collection</a></li>
 											<li><a href="AboutUs.php">About Us</a></li>
 						                    <li><a href="Contact.php">Contact Us</a></li>
@@ -102,7 +102,7 @@ require('../Connection/Verification.php');
 						<h3 class = "contact-title">Send us a Message</h3>
 					</div>
 					<div class = "col-sm-6">
-						<img src = "../Images/Mail-Icon.png" class = "Mail-Icon" align = "right">
+						<img src = "Images/Mail-Icon.png" class = "Mail-Icon" align = "right">
 					</div>
 				</div>
 					<form method = "post">
@@ -123,7 +123,7 @@ require('../Connection/Verification.php');
 							<textarea class= "input-control-textarea" id="comments" name="Comment" rows="5"></textarea>
 						</div>
 						<div class = "form-group col-sm-12">
-							<button type="submit" name="Inquiry"  align = "right"><img src="../Images/EmailSent.png" alt="SomeAlternateText" class = "EmailSent" ></button>
+							<button type="submit" name="Inquiry"  align = "right"><img src="Images/EmailSent.png" alt="SomeAlternateText" class = "EmailSent" ></button>
 							<br>
 							
 						</div>
@@ -136,7 +136,7 @@ require('../Connection/Verification.php');
 							<p class = "info-title text-center">Contact Information</p>
 							<div class = "row">
 								<div class = "col-sm-2">
-									<img src = "../Images/Location-green.png" class = "location-green">
+									<img src = "Images/Location-green.png" class = "location-green">
 								</div>
 								<div class = "col-sm-10">
 									<p class = "info-address">Villa Esperanza Magdiwang,<br>
@@ -145,7 +145,7 @@ require('../Connection/Verification.php');
 							</div>
 							<div class = "row">
 								<div class = "col-sm-2">
-									<img src = "../Images/Contact-green.png" class = "contact-green">
+									<img src = "Images/Contact-green.png" class = "contact-green">
 								</div>
 								<div class = "col-sm-10">
 									<p class = "info-contact">0906-176-7028<br>0908-626-8360<br>0956-443-7349</p>
@@ -153,7 +153,7 @@ require('../Connection/Verification.php');
 							</div>
 							<div class = "row">
 								<div class = "col-sm-2">
-									<img src = "../Images/mail-green.png" class = "location-green">
+									<img src = "Images/mail-green.png" class = "location-green">
 								</div>
 								<div class = "col-sm-10">
 									<p class = "info-email">jeremedavis77@y.com<br>jeremedavis1977@yahoo.com</p>
@@ -171,7 +171,7 @@ require('../Connection/Verification.php');
 
 
 <footer class = "text-center">
-	<a href="Home.php"><img  src="../Images/Logo-for-website-2.png"></a>
+	<a href="Home.php"><img  src="Images/Logo-for-website-2.png"></a>
 	<p class ="footerText">© 2017 | Jereme Davis</p>
 </footer>
 

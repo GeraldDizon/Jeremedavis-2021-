@@ -1,5 +1,5 @@
 <?php
-require("../../Connection/Connect.php");
+require("../Connection/Connect.php");
 
             // php delete data in mysql database using PDO
 
@@ -17,7 +17,7 @@ require("../../Connection/Connect.php");
             $result = $query->execute(array(":id"=>$id));
 
             if($result){
-                header("Location: ../../Public/Home.php");
+                header("Location: index.php");
             } else {
                 echo 'error';
             }

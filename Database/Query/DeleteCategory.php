@@ -10,7 +10,7 @@ include('../Connection/Connect.php');
         
         if($result)
         {
-            header("Location: ../Admin/Admin-AddCategory.php");
+            header("Location: Admin-AddCategory.php");
         }
         else{
             echo 'ERROR Data Not Deleted';

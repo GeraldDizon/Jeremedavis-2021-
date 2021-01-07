@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("../../Database/Query/ViewCartCheckout.php");
-require("../../Connection/Connect.php");
+include("Database/Query/ViewCartCheckout.php");
+require("../Connection/Connect.php");
 
 try{
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -60,7 +60,7 @@ try{
         if($result)
         {
             echo 'Data Deleted';
-            header("Location: ../../Public/Success.php?id=$orderid");
+            header("Location: Success.php?id=$orderid");
         }
         else{
             echo 'ERROR Data Not Deleted';

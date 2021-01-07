@@ -26,7 +26,7 @@ $query = $conn->prepare($sql);
 $result = $query->execute(array(":Address"=>$ShippingAddress, ":Fee"=>$ShippingFee, ":idbase"=>$id));
 
 if($result){
-    header("Location: ../Admin/Admin-AddShippingFee.php");
+    header("Location: Admin-AddShippingFee.php");
 } else {
     echo 'error';
 }

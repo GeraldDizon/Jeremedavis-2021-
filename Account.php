@@ -1,24 +1,24 @@
 <?php
 session_start();
 if(isset($_SESSION['Email'])){
-	header("Location: ../Public/Home.php");
+	header("Location: Public/Home.php");
 }
-	require("../Database/Query/login.php");
-	require("../Database/Query/signUp.php");
+	require("Database/Query/login.php");
+	require("Database/Query/signUp.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../Css/bootstrap-theme.min.css">
-<link rel="stylesheet" type="text/css" href="../Css/Account.css">
-<link rel="stylesheet" type="text/css" href="../Css/nav.css">
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-min.js"></script>
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/npm.js"></script>
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="Css/Account.css">
+<link rel="stylesheet" type="text/css" href="Css/nav.css">
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap-min.js"></script>
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/npm.js"></script>
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -35,7 +35,7 @@ if(isset($_SESSION['Email'])){
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<!-- Collapsing code also (before the closing nav input closing div)-->
 						<ul class="nav navbar-nav">
-							<li><a href="Home.php">Home</a></li>
+							<li><a href="index.php">Home</a></li>
 							<li><a href="Collection.php">Collection</a></li>
 							<li><a href="AboutUs.php">About Us</a></li>
 							<li><a href="Contact.php">Contact Us</a></li>
@@ -114,6 +114,10 @@ if(isset($_SESSION['Email'])){
 								</div>
 								<input type="submit" class="btn btn-primary btn-md" name = "login" name = "login" value = "Login">
 							</form>
+							<br>
+							<h4>Use this to open admin account options</h4>
+							<p>Email Address: jereme@yahoo.com</p>
+							<p>Password jereme</p>
 				</div>
 			</div>
 			<div class ="col-md-6">
@@ -187,7 +191,7 @@ if(isset($_SESSION['Email'])){
 
 
 <footer class = "text-center">
-	<a href="Home.php"><img  src="../Images/Logo-for-website-2.png"></a>
+	<a href="Home.php"><img  src="Images/Logo-for-website-2.png"></a>
 	<p class ="footerText">© 2017 | Jereme Davis</p>
 </footer>
 

@@ -1,27 +1,27 @@
 <?php
 	session_start();
-	/*require_once('../Connection/Redirect.php');
+	/*require_once('Connection/Redirect.php');
 	if (!isset($_SESSION['views'])) {
 	  $_SESSION['views'] = 0;
 	} else {
 	  $_SESSION['views']++;
 	}
 	 echo $_SESSION['views'];*/
-	include("../Database/Query/ViewOrderHistory.php");
-	include("../Database/Query/ViewOrderShippingDetails.php");
-	require("../Connection/Verification.php");
+	include("Database/Query/ViewOrderHistory.php");
+	include("Database/Query/ViewOrderShippingDetails.php");
+	require("Connection/Verification.php");
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../Css/nav.css">
-	<link rel="stylesheet" type="text/css" href="../Css/Order.css">
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-min.js"></script>
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="Css/nav.css">
+	<link rel="stylesheet" type="text/css" href="Css/Order.css">
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap-min.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 	</head>
 	<body onload="total();">
 
@@ -41,7 +41,7 @@
 						                <div class="collapse navbar-collapse" id="myNavbar">
 						  <!-- Collapsing code also (before the closing nav input closing div)-->
 						                  <ul class="nav navbar-nav" >
-						                    <li><a href="Home.php">Home</a></li>
+						                    <li><a href="index.php">Home</a></li>
 						                    <li><a href="Collection.php">Collection</a></li>
 							<li><a href="AboutUs.php">About Us</a></li>
 						                    <li><a href="Contact.php">Contact Us</a></li>
@@ -143,11 +143,11 @@
 </div>
 
 <footer class = "text-center fixed-bottom">
-	<a href="Home.php"><img  src="../Images/Logo-for-website-2.png"></a>
+	<a href="Home.php"><img  src="Images/Logo-for-website-2.png"></a>
 	<p>© 2017 | Jereme Davis</p>
 </footer>
 
-<script rel="stylesheet" type="text/javascript" src="../Javascript/Order.js"></script>
+<script rel="stylesheet" type="text/javascript" src="Javascript/Order.js"></script>
 
 </body>
 </html>

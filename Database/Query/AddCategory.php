@@ -21,7 +21,7 @@ if(isset($_POST['AddCategory'])){
 
 if($stmt)
     {
-        header("Location: ../Admin/Admin-AddCategory.php");
+        header("Location: Admin-AddCategory.php");
     }else{
         echo 'Data Not Inserted';
     }

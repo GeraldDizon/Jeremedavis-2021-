@@ -22,7 +22,7 @@ if(isset($_POST['AddShippingFee'])){
 
 if($stmt)
     {
-        header("Location: ../Admin/Admin-AddShippingFee.php");
+        header("Location: Admin-AddShippingFee.php");
     }else{
         echo 'Data Not Inserted';
     }

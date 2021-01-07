@@ -1,7 +1,7 @@
 .row.content {height: 800px;}
 .sidenav{
   background-color: #313942;
-  height: 100%;
+  height: 100vh;
 }
 @media screen and (max-width: 767px) {
   .row.content {height: auto;} 
@@ -43,4 +43,9 @@ button:focus{
 }
 .EmailSent{
   height:30px;
+}
+ul{
+    margin-top:30vh;
+    width: 70%;
+    margin-left:1vw;
 }

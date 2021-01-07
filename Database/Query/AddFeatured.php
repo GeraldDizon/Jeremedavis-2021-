@@ -26,7 +26,7 @@ if(isset($_POST['AddFeatured'])){
     $result = $query->execute(array(":featured"=>$featured, ":id"=>$id));
 
     if($result){
-        header("Location: ../Admin/Admin-AddFeaturedItem.php");
+        header("Location: Admin-AddFeaturedItem.php");
     } else {
         echo 'error';
     }

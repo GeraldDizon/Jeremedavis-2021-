@@ -1,5 +1,5 @@
 <?php
-require("../Connection/Connect.php");
+require("Connection/Connect.php");
 
 if(isset($_POST['login'])){
 	try {
@@ -40,13 +40,13 @@ $stmt = $query->execute(array(":Email"=>$Email, ":Password"=>$Password));
 			$_SESSION['contact'] = $row['Contact'];
 			$_SESSION['address'] = $row['Address'];
 			$_SESSION['status'] = $row['Status'];
-			header("Location: ../Public/Home.php?success");
+			header("Location: Home.php?success");
 			//Check for the desired email and password for admin. 
 			if($Email=="jereme@yahoo.com" & $Password=="jereme"){
-				header("Location: ../Admin/Admin-Inquiry.php");
+				header("Location: Admin/Admin-Inquiry.php");
 			}
 			else{
-				header("Location: ../Public/Home.php");
+				header("Location: index.php");
 			}	
 		}
 

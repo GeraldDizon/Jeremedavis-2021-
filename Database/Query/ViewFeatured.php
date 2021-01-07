@@ -1,5 +1,5 @@
 <?php
-include('../Connection/Connect.php');
+include('Connection/Connect.php');
 
 
 	    $page =isset($_GET['page'])? $_GET['page'] : 1 ;

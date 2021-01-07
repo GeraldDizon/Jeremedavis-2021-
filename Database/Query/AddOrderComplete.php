@@ -18,7 +18,7 @@ if(isset($_POST['completed'])){
     $sql = "UPDATE shippingdetails SET Status = '$status' WHERE id = :id";
     $query = $conn->prepare($sql);
     $result = $query->execute(array(":id"=>$id));
-    header("Location: ../Admin/Admin-Orders.php");
+    header("Location: Admin-Orders.php");
     // prepare sql and bind parameters
 if($stmt)
     {

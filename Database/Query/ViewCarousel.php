@@ -1,5 +1,5 @@
 <?php
-include('../Connection/Connect.php');
+include('Connection/Connect.php');
 
 
     $value = "1";

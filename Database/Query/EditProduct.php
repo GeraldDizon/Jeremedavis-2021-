@@ -45,7 +45,7 @@ if(isset($_POST['EditProduct']))
                 $errorsEditProduct[] = "File too big";
             }
 
-            $targetPath = "../Images/" . $imageFile;
+            $targetPath = "Images/" . $imageFile;
             $sourcePath = $_FILES["fileUpload"]["tmp_name"];
             if(file_exists($targetPath)){
                 $errorsEditProduct[] = "File already there";
@@ -89,7 +89,7 @@ $query = $conn->prepare($sql);
 $result = $query->execute(array(":Link"=>$Link, ":Name"=>$ProductName, ":Type"=>$ProductType, ":Price"=>$ProductPrice, ":Description"=>$ProductDescription, ":Size"=>$ProductSize, ":Wood"=>$ProductWood, ":id"=>$id));
 
 if($result){
-    header("Location: ../Admin/Admin-AddProduct.php");
+    header("Location: Admin-AddProduct.php");
 } else {
     echo 'error';
 }

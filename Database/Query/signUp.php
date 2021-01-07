@@ -1,5 +1,5 @@
 <?php
-require("../Connection/Connect.php");
+require("Connection/Connect.php");
 if(isset($_POST['signUp'])){
 try {
 
@@ -86,8 +86,8 @@ echo "Error: " . $e->getMessage();
                         $_SESSION['contact'] = $row['Contact'];
                         $_SESSION['address'] = $row['Address'];
                         $_SESSION['status'] = $row['Status'];
-                        require('../phpmailer/EmailVerification.php');
-                        header("Location: EdgarDavis(close)/Public/Home.php");
+                        require('phpmailer/EmailVerification.php');
+                        header("Location: index.php");
                         //Send Verification Email
 
 

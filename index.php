@@ -1,20 +1,20 @@
 <?php
 session_start();
-require('../Connection/Verification.php');
-require("../Database/Query/ViewFeatured.php");
-require("../Database/Query/ViewCarousel.php");
+require('Connection/Verification.php');
+require("Database/Query/ViewFeatured.php");
+require("Database/Query/ViewCarousel.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../Css/Home.css">
-<link rel="stylesheet" type="text/css" href="../Css/nav.css">
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/npm.js"></script>
-<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Css/Home.css">
+<link rel="stylesheet" type="text/css" href="Css/nav.css">
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/npm.js"></script>
+<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 </head>
 
 <body id = "body">
@@ -34,7 +34,7 @@ require("../Database/Query/ViewCarousel.php");
 						                <div class="collapse navbar-collapse" id="myNavbar">
 						  <!-- Collapsing code also (before the closing nav input closing div)-->
 						                  <ul class="nav navbar-nav" >
-						                    <li><a href="Home.php">Home</a></li>
+						                    <li><a href="index.php">Home</a></li>
 						                    <li><a href="Collection.php">Collection</a></li>
 											<li><a href="AboutUs.php">About Us</a></li>
 						                    <li><a href="Contact.php">Contact Us</a></li>
@@ -99,7 +99,7 @@ require("../Database/Query/ViewCarousel.php");
 		<div class  = "col-md-7">
 
 		<?php if($rowCount == 0){ ?>
-			 <img src="../Images/BedHome.png" class = "first-Image" alt="Image Not Found">
+			 <img src="Images/BedHome.png" class = "first-Image" alt="Image Not Found">
 		<?php } else { ?>
 			<br>
 			<div class="container-fluid">
@@ -146,14 +146,14 @@ require("../Database/Query/ViewCarousel.php");
 	<div class = "container text-center">
 		<div class = "col-md-4">
 
-			<img src ="../Images/first-trio.png" class = "trio">
+			<img src ="Images/first-trio.png" class = "trio">
 		</div>
 		<div class = "col-md-4">
-			<img src ="../Images/second-trio.png" class = "trio">
+			<img src ="Images/second-trio.png" class = "trio">
 
 		</div>
 		<div class = "col-md-4">
-			<img src ="../Images/third-trio.png" class = "trio">
+			<img src ="Images/third-trio.png" class = "trio">
 		</div>
 	</div>
 </div>
@@ -173,7 +173,7 @@ require("../Database/Query/ViewCarousel.php");
 					foreach ($rows_featured as $row) {?>		
 						<div class='col-sm-4'>
 							<div class='thumbnail'>
-							<a href = "ProductInfo.php?id=<?php echo $row['id'] ?>"><img src = "../Images/<?php echo $row['Image'] ?>"></a>
+							<a href = "ProductInfo.php?id=<?php echo $row['id'] ?>"><img src = "<?php echo $row['Image'] ?>"></a>
 					      </div>
 					  </div>
 					  <?php $i++;
@@ -184,13 +184,8 @@ require("../Database/Query/ViewCarousel.php");
 	</div>
 </div>
 
-
-
-
-
-
 <footer class = "text-center">
-	<a href="Home.php"><img  src="../Images/Logo-for-website-2.png"></a>
+	<a href="Home.php"><img  src="Images/Logo-for-website-2.png"></a>
 	<p class ="footerText">© 2017 | Jereme Davis</p>
 </footer>
 

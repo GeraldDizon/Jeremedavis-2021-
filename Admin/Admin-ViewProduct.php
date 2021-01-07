@@ -1,9 +1,5 @@
 <?php
-    include('Connection/Connect.php');
-
-    // Create connection
-    // Check connection
-
+    include('../Connection/Connect.php');
 
     $page =isset($_GET['page'])? $_GET['page'] : 1 ;
 
@@ -22,8 +18,6 @@
     while ($row = $query->fetch(PDO::FETCH_ASSOC)){
         $rows[] = $row;
     }
-
-
 
     $sql = "SELECT * FROM product  ORDER BY id DESC";
     $query = $conn->prepare($sql);

@@ -1,7 +1,7 @@
 .row.content {height: 800px;}
 .sidenav{
   background-color: #313942;
-  height: 100%;
+  height: 100vh;
 }
 @media screen and (max-width: 767px) {
   .row.content {height: auto;} 
@@ -31,4 +31,41 @@ tr:nth-child(even){background-color: #f2f2f2}
 }
 h3{
 	color:#5e5e5e;
+}
+.users-icon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  padding-top:0px;
+  -bottom:0px;
+}
+.inquiry-icon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:40px;
+}
+.tables-icon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:35px;
+}
+.orders-icon{
+
+  margin-left: auto;
+  margin-right: auto;
+  width:35px;
+}
+.logout-icon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:30px;
+}
+ul{
+    margin-top:30vh;
+    width: 70%;
+    margin-left:1vw;
 }

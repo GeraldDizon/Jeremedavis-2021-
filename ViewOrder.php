@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include('../Database/Query/ViewOrderHistory.php');
+include('Database/Query/ViewOrderHistory.php');
 
 
 ?>

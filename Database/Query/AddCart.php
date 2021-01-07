@@ -1,5 +1,5 @@
 <?php
-require("../Connection/Connect.php");
+require("Connection/Connect.php");
 
 try {
 

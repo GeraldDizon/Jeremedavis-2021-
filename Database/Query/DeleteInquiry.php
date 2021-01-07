@@ -10,7 +10,7 @@ if(isset($_POST['DeleteInquiry']))
     
     if($result)
     {
-        header("Location: ../Admin/Admin-Inquiry.php");
+        header("Location: Admin-Inquiry.php");
     }
     else{
         echo 'ERROR Data Not Deleted';

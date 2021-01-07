@@ -1,5 +1,5 @@
 <?php
-    include('../Connection/Connect.php');
+    include('Connection/Connect.php');
 
     // Create connection
     // Check connection

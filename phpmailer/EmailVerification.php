@@ -33,6 +33,6 @@ if (session_status() == PHP_SESSION_NONE) {
     /*$mail->Body = "<a href = 'http://www.jeremedavis.xyz/Database/Query/Verified.php?id=$id'>Verify my email</a>";
     $mail->AltBody =  "<a href = 'http://www.jeremedavis.xyz/Database/Query/Verified.php?id=$id'>Verify my email</a>";*/
     if($mail->send()){
-        header("Location: ../Public/Profile.php");
+        header("Location: ../Profile.php");
     }
 ?>

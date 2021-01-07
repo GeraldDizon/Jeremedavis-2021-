@@ -1,5 +1,5 @@
 <?php
-require("../Connection/Connect.php");
+require("Connection/Connect.php");
 if(isset($_POST['profile'])){
 try {
 
@@ -60,7 +60,7 @@ echo "Error: " . $e->getMessage();
                 $result = $query->execute(array(":firstname"=>$firstname, ":lastname"=>$lastname, ":contact"=>$contact, ":address"=>$address,  ":id"=>$id));
 
                 if($result){
-                    header("Location ../../Public/Home.php");
+                    header("Location index.php");
                     $_SESSION['firstname'] = $firstname = $_POST['firstname'];
                     $_SESSION['lastname'] = $lastname = $_POST['lastname'];
                     $_SESSION['contact'] = $contact = $_POST['contact'];

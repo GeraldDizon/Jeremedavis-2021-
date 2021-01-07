@@ -6,7 +6,7 @@
 .row.content {height: 800px;}
 .sidenav{
   background-color: #313942;
-  height: 100%;
+  height: 100vh;
 }
 @media screen and (max-width: 767px) {
   .row.content {height: auto;} 
@@ -86,4 +86,13 @@ textarea {
 }
 .form-control{
   min-width: 100px
+}
+.input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn {
+ margin-top:15px;
+ height:33px;
+}
+ul{
+    margin-top:30vh;
+    width: 70%;
+    margin-left:1vw;
 }

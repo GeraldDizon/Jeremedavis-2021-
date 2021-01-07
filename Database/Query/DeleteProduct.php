@@ -31,7 +31,7 @@ if (file_exists($image)){
     
     if($result)
     {
-        header("Location: ../Admin/Admin-AddProduct.php");
+        header("Location: Admin-AddProduct.php");
     }
     else{
         echo 'ERROR Data Not Deleted';

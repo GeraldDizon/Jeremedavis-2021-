@@ -10,8 +10,6 @@ function checkforblank(){
         return false;
     }
 }
-
-
 function ShippingOpt(){
     var shippingfee = document.getElementById("ShippingFee").value;
     var x = 0;

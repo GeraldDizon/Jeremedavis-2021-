@@ -1,29 +1,29 @@
 <?php
 	session_start();
-	/*require_once('../Connection/Redirect.php');
+	/*require_once('Connection/Redirect.php');
 	if (!isset($_SESSION['views'])) {
 	  $_SESSION['views'] = 0;
 	} else {
 	  $_SESSION['views']++;
 	}
 	 echo $_SESSION['views'];*/
-	include("../Database/Query/ViewCart.php");
-	include("../Database/Query/DeleteOrder.php");
-	require('../Connection/Verification.php');
+	include("Database/Query/ViewCart.php");
+	include("Database/Query/DeleteOrder.php");
+	require('Connection/Verification.php');
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../Css/nav.css">
-	<link rel="stylesheet" type="text/css" href="../Css/Cart.css">
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap-min.js"></script>
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
-	<script rel="stylesheet" type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="Css/nav.css">
+	<link rel="stylesheet" type="text/css" href="Css/Cart.css">
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap-min.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-1.12.2.min.js"></script>
+	<script rel="stylesheet" type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 	</head>
-	<body onload="CaclulateQuantityTotal();">
+	<body>
 
  			  	<nav class="navbar navbar-inverse">
 						    <div class="container-fluid">
@@ -41,7 +41,7 @@
 						                <div class="collapse navbar-collapse" id="myNavbar">
 						  <!-- Collapsing code also (before the closing nav input closing div)-->
 						                  <ul class="nav navbar-nav" >
-						                    <li><a href="Home.php">Home</a></li>
+						                    <li><a href="index.php">Home</a></li>
 						                    <li><a href="Collection.php">Collection</a></li>
 							<li><a href="AboutUs.php">About Us</a></li>
 						                    <li><a href="Contact.php">Contact Us</a></li>
@@ -113,7 +113,7 @@
 					  	<div class = "text-center">
 					  		<div class = "container ">
 					  			<div class = "cart-bg">
-					  				<img src = "../Images/Cart.png" class = "cart-img">
+					  				<img src = "Images/Cart.png" class = "cart-img">
 					  				<p class = "cart-info-subtitle">Your cart is <br> <span>Empty</span></p>
 					  			</div>
 					  		</div>
@@ -137,15 +137,15 @@
 														<input type="hidden" name="cost" id="cost" value = "<?php echo $row['Price'] ?>"/>
 														<td><?php echo number_format($row['Price']) ?></td>
 														
-														<input type = "hidden" id="quantity" value = "<?php echo $row['Quantity'] ?>">
+														<input type = "hidden" id="quantity" class="quantity" value = "<?php echo $row['Quantity'] ?>">
 
-														<td><p class = "quantity" onblur="CaclulateQuantityTotal();" data-id1 = "<?php echo $row['id'] ?>" contenteditable><?php echo $row['Quantity'] ?></p></td>
+														<td><p class = "quantity" onblur="CalculateQuantityTotal();" data-id1 = "<?php echo $row['id'] ?>" contenteditable><?php echo $row['Quantity'] ?></p></td>
 
 														
 														<td class = "subtotal" id = "total" data-id2 = "<?php echo $row['id'] ?>"></td>
 														<input type = "hidden"  name = "subtotal"></td>
 														<td>
-														<button type="submit" class = "DeleteButton" name = "DeleteOrder"  align = "right"><img src="../Images/Trash-Icon.png" alt="Delete" class = "EmailSent" ></button>
+														<button type="submit" class = "DeleteButton" name = "DeleteOrder"  align = "right"><img src="Images/Trash-Icon.png" alt="Delete" class = "EmailSent" ></button>
 														</td>
 												</form>
 											</tr>
@@ -203,23 +203,33 @@
 				</div>
 			</div>
 		<?php } ?>
+		<h2>Note</h2>
+		<p>Cart is going under recovery up to paypal checkout.</p>
+		<p>Feel free to continue also.</p>
 		</div>
 	</div>
 </div>
 
 <footer class = "text-center fixed-bottom">
-	<a href="Home.php"><img  src="../Images/Logo-for-website-2.png"></a>
+	<a href="Home.php"><img  src="Images/Logo-for-website-2.png"></a>
 	<p>© 2017 | Jereme Davis</p>
 </footer>
 
 <script rel="stylesheet" type="text/javascript" src="../Javascript/Cart.js"></script>
 
 <script>
+
+$(document).ready(function(){
+  $("td").click(function(){
+    alert("The paragraph was clicked.");
+  });
+});
+
 	
-function edit_data(id, text, column_name)  
+/*function edit_data(id, text, column_name)  
       {  
            $.ajax({  
-                url:"../Database/Query/EditOrder.php",  
+                url:"Database/Query/EditOrder.php",  
                 method:"POST",  
                 data:{id:id, text:text, column_name:column_name},  
                 dataType:"text",  
@@ -228,18 +238,19 @@ function edit_data(id, text, column_name)
                 }  
            });  
       }
-      $(document).on('blur', '.quantity', function(){  
-           var id = $(this).data("id1");    
-           var quantity_value = $(this).text(); 
-           edit_data(id, quantity_value, "Quantity"); 
-      });
+      $(document).on('change', '.quantity', function(){  
+           var id = $(this).data("id1")   
 
-      $(document).on('click', '.subtotal', function(){  
+
+           var quantity_value = $(this).text(); 
+           edit_data(id, quantity_value, "Quantity"); //
+
+  		$(document).on('click', '.subtotal', function(){  
            var id = $(this).data("id2");  
            var subtotal_value = $(this).text();   
            edit_data(id, subtotal_value, "Subtotal");  
       });
-
+*/
 
 </script>
 

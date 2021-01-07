@@ -1,5 +1,5 @@
 <?php
-require("../Connection/Connect.php");
+require("Connection/Connect.php");
 
 // php delete data in mysql database using PDO
     try {
@@ -20,7 +20,7 @@ if(isset($_POST['DeleteOrder']))
     if($result)
     {
         echo 'Data Deleted';
-        header("Location: ../Public/Cart.php");
+        header("Location: Cart.php");
     }
     else{
         echo 'ERROR Data Not Deleted';
