@@ -149,7 +149,7 @@
 					<form method="post" name="cart" action="https://www.sandbox.paypal.com/cgi-bin/webscr">
 						<input type="hidden" name="cmd" value="_cart">
 						<input type="hidden" name="upload" value="1">
-						<input type="hidden" name="business" value="geralddizon84@yahoo.com">
+						<input type="hidden" name="business" value="jereme@yahoo.com">
 						<input type="hidden" name="lc" value="PH">
 						<input type="hidden" name="currency_code" value="PHP">
 						<input type="hidden" name="return" value="http://localhost/EdgarDavis/Database/Query/Checkout.php" />

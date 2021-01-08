@@ -219,14 +219,9 @@
 
 <script>
 
-$(document).ready(function(){
-  $("td").click(function(){
-    alert("The paragraph was clicked.");
-  });
-});
 
 	
-/*function edit_data(id, text, column_name)  
+function edit_data(id, text, column_name)  
       {  
            $.ajax({  
                 url:"Database/Query/EditOrder.php",  
@@ -250,7 +245,7 @@ $(document).ready(function(){
            var subtotal_value = $(this).text();   
            edit_data(id, subtotal_value, "Subtotal");  
       });
-*/
+
 
 </script>
 
