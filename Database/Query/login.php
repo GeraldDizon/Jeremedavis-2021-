@@ -40,7 +40,7 @@ $stmt = $query->execute(array(":Email"=>$Email, ":Password"=>$Password));
 			$_SESSION['contact'] = $row['Contact'];
 			$_SESSION['address'] = $row['Address'];
 			$_SESSION['status'] = $row['Status'];
-			header("Location: Home.php?success");
+			header("Location: index.php?success");
 			//Check for the desired email and password for admin. 
 			if($Email=="jereme@yahoo.com" & $Password=="jereme"){
 				header("Location: Admin/Admin-Inquiry.php");

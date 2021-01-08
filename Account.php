@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['Email'])){
-	header("Location: Public/Home.php");
+	header("Location: index.php");
 }
 	require("Database/Query/login.php");
 	require("Database/Query/signUp.php");

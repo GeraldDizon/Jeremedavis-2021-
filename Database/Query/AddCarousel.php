@@ -11,7 +11,7 @@ if(isset($_POST['AddCarousel'])){
     
      // get id to delete
 
-    echo $id = $_POST['id'];
+    $id = $_POST['id'];
     if(isset($_POST['test'])){
         $Carousel = "1";
     } else {
