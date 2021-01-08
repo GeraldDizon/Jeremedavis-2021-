@@ -186,7 +186,7 @@ require('../Connection/AdminOnlyPageRedirect.php');
                         <tr> 
                         <form method = "post" enctype="multipart/form-data">
                           <input type ="hidden" name = "id" value= "<?php echo $row['id'] ?>">
-                          <input type ="hidden" name = "ImageFile" value= "<?php echo $row['Image'] ?>">
+                          <input type ="hidden" name = "ImageFile" value= "../<?php echo $row['Image'] ?>">
                           <td><img class = "ProductImage" src = "../<?php echo $row['Image'] ?>">
                             <input type = "file" name = "fileUpload" id = "fileUpload"></td>
                           <td><input class = "form-control" type ="text" name = "Link" value = "<?php echo $row['3dLink'] ?>"></td>
